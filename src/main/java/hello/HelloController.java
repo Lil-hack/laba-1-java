@@ -8,10 +8,10 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @RestController
 public class HelloController {
     
-    @RequestMapping("/{numberOne},{numberTwo}")
-    public String index (@PathVariable int numberOne,@PathVariable int numberTwo) {
-        int result=numberOne+numberTwo;
-        
+    @RequestMapping("/{numberOne}")
+    public String index (@PathVariable int numberOne) {
+        int result=numberOne;
+
         return "hello Wolrd! Result = "+result;
     }
 
