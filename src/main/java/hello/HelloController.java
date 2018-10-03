@@ -10,7 +10,7 @@ public class HelloController {
     
     @RequestMapping("/{text}")
     public String index (@PathVariable String text) {
-        return "hi!"+text;
+        return "hi!";
     }
 
 }
