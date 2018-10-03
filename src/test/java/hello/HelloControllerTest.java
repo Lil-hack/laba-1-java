@@ -29,6 +29,13 @@ public class HelloControllerTest {
                 .andExpect(content().string(equalTo("hi!4")));
 
     }
+    @Test
+    public void getHello2() throws Exception {
+        mvc.perform(MockMvcRequestBuilders.get("/2,3").accept(MediaType.APPLICATION_JSON))
+                .andExpect(status().isOk())
+                .andExpect(content().string(equalTo("hi!5")));
+
+    }
 //    @Test
 //    public void getHello2(String text) throws Exception {
 //        text="123";
