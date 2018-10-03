@@ -1,8 +1,9 @@
 language: java
 jdk:
  - oraclejdk8
- script:
- - build.grandle --scan -s
+cache:
+  directories:
+  - $HOME/.gradle
 deploy:
   provider: heroku
   api_key:
