@@ -14,5 +14,11 @@ public class HelloController {
 
         return "hello Wolrd! Result = "+result;
     }
+    @RequestMapping()
+    public String index () {
+
+
+        return "hello Wolrd!";
+    }
 
 }
