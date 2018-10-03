@@ -9,13 +9,13 @@ import org.springframework.web.bind.annotation.RequestMapping;
 public class HelloController {
     
     @RequestMapping("/{numberOne}")
-    public String index (@PathVariable int numberOne) {
+    public String test (@PathVariable int numberOne) {
         int result=numberOne;
 
         return "hello Wolrd! Result = "+result;
     }
     @RequestMapping()
-    public String index () {
+    public String test () {
 
 
         return "hello Wolrd!";
