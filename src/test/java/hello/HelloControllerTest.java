@@ -24,18 +24,18 @@ public class HelloControllerTest {
 
     @Test
     public void getHello() throws Exception {
-        mvc.perform(MockMvcRequestBuilders.get("/2").accept(MediaType.APPLICATION_JSON))
+        mvc.perform(MockMvcRequestBuilders.get("/2,2").accept(MediaType.APPLICATION_JSON))
                 .andExpect(status().isOk())
-                .andExpect(content().string(equalTo("hello Wolrd! Result = 2")));
-
+                .andExpect(content().string(equalTo("hello Wolrd! Result = 4")));
+        System.out.println("test1 ");
     }
-//    @Test
-//    public void getHello2() throws Exception {
-//        mvc.perform(MockMvcRequestBuilders.get("/2,3").accept(MediaType.APPLICATION_JSON))
-//                .andExpect(status().isOk())
-//                .andExpect(content().string(equalTo("hello Wolrd! Result = 5")));
-//
-//    }
+    @Test
+    public void getHello2() throws Exception {
+        mvc.perform(MockMvcRequestBuilders.get("/2,3").accept(MediaType.APPLICATION_JSON))
+                .andExpect(status().isOk())
+                .andExpect(content().string(equalTo("hello Wolrd! Result = 5")));
+        System.out.println("test2 ");
+    }
 //    @Test
 //    public void getHello2(String text) throws Exception {
 //        text="123";

@@ -7,18 +7,19 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 @RestController
 public class HelloController {
-    
-    @RequestMapping("/{numberOne}")
-    public String test (@PathVariable int numberOne) {
-        int result=numberOne;
 
-        return "hello Wolrd! Result = "+result;
-    }
     @RequestMapping()
-    public String test () {
-
+    public String getHello () {
 
         return "hello Wolrd!";
     }
+
+    @RequestMapping("/{numberOne},{numberTwo}")
+    public String getHello (@PathVariable int numberOne,@PathVariable int numberTwo) {
+        int result=numberOne+numberTwo;
+
+        return "hello Wolrd! Result = "+result;
+    }
+
 
 }
