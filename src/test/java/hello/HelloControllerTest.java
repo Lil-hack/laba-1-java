@@ -23,17 +23,17 @@ public class HelloControllerTest {
     private MockMvc mvc;
 
     @Test
-    public void getHello() throws Exception {
+    public void testOne() throws Exception {
         mvc.perform(MockMvcRequestBuilders.get("/2,2").accept(MediaType.APPLICATION_JSON))
                 .andExpect(status().isOk())
-                .andExpect(content().string(equalTo("hello Wolrd! Result = 4")));
+                .andExpect(content().string(equalTo("hello World! Result = 4")));
         System.out.println("test1 ");
     }
     @Test
-    public void getHello2() throws Exception {
+    public void testTwo() throws Exception {
         mvc.perform(MockMvcRequestBuilders.get("/2,3").accept(MediaType.APPLICATION_JSON))
                 .andExpect(status().isOk())
-                .andExpect(content().string(equalTo("hello Wolrd! Result = 5")));
+                .andExpect(content().string(equalTo("hello World! Result = 5")));
         System.out.println("test2 ");
     }
 //    @Test

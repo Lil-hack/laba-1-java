@@ -11,14 +11,14 @@ public class HelloController {
     @RequestMapping()
     public String getHello () {
 
-        return "hello Wolrd!";
+        return "hello World!";
     }
 
     @RequestMapping("/{numberOne},{numberTwo}")
     public String getHello (@PathVariable int numberOne,@PathVariable int numberTwo) {
         int result=numberOne+numberTwo;
 
-        return "hello Wolrd! Result = "+result;
+        return "hello World! Result = "+result;
     }
 
 
