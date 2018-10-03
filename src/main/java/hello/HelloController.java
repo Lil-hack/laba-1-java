@@ -11,6 +11,7 @@ public class HelloController {
     @RequestMapping("/{numberOne},{numberTwo}")
     public String index (@PathVariable int numberOne,@PathVariable int numberTwo) {
         int result=numberOne+numberTwo;
+        
         return "hello Wolrd! Result = "+result;
     }
 
